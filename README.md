@@ -1,16 +1,50 @@
-### Hi there 👋
+## Olá Pessoal!👋
+Bem Vindos ao GitHub do SUSTENTEI!🛒
+<p align="center">
+  <img width="250px" src="https://i.imgur.com/cYur8tj.png" title="source: imgur.com"/>
+</p>
+  <h3>
+  <p><b>Projeto Integrador Generation Brasil - < /SUSTENTEI ></b></p>
+  </div>
 
-<!--
-**SustenteiGen/SustenteiGen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+  <hr>
+  
+  ### • **APRESENTAÇÃO**
+  A < /Sustentei > é um E-Commerce sustentável. Com o objetivo de impactar impactar o publico com a venda de produtos sustentáveis, ecológicos e biodegradáveis, além de notificar o usuário sobre a emissão de carbono referente ao frete do(s) produto(s).
+  
+## Tecnologias utilizadas:
 
-Here are some ideas to get you started:
+![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![mysql](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)  
+![html](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+![javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### **Este projeto está sendo desenvolvido por um grupo de cinco integrantes, sendo eles:**
+
+## Diego Oliveira Britto
+![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white)
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/DiegoOBritto)](https://github.com/DiegoOBritto)
+
+
+## Fernando Fernandes Cardoso
+![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white)
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/FernandoFCardoso)](https://github.com/FernandoFCardoso)
+
+
+## Maria Carolina S. N. Xavier
+[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/maria-carolina-s-n-xavier-05340b191/)](https://www.linkedin.com/in/maria-carolina-s-n-xavier-05340b191/) 
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/mcsnsx)](https://github.com/mcsnsx)
+
+
+## Talita Rosalina Ribeiro
+[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/talita-r-b5a105186/)](https://www.linkedin.com/in/talita-r-b5a105186/) 
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/talitarribeiro)](https://github.com/talitarribeiro)
+
+
+## Vinicius Eidi Sato
+[![Linkedin Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&labelColor=blue&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/vinicius-eidi-sato-6868781a0/)](https://www.linkedin.com/in/vinicius-eidi-sato-6868781a0/) 
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat-square&labelColor=black&logo=Github&logoColor=white&link=https://github.com/eidisato)](https://github.com/eidisato)
+
+<br>
