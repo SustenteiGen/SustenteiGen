@@ -1,5 +1,5 @@
 ## Olá Pessoal!👋
-Bem Vindos ao GitHub do SUSTENTEI!🛒
+Bem Vindes ao GitHub do SUSTENTEI!🛒
 <p align="center">
   <img width="250px" src="https://i.imgur.com/cYur8tj.png" title="source: imgur.com"/>
 </p>
