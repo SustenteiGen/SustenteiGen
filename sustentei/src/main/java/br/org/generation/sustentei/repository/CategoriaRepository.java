@@ -9,7 +9,7 @@ import br.org.generation.sustentei.model.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository <Categoria, Long>{
-	public List <Categoria> findAllByTipoContainingIgnoreCase(String categoria);
+	public List <Categoria> findAllByTipoContainingIgnoreCase(String tipo);
 	
 	public List <Categoria> findAllByPalavraChaveContainingIgnoreCase(String palavraChave);	
 		

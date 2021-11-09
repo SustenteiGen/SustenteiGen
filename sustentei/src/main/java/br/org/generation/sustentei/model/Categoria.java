@@ -28,7 +28,7 @@
 		//DESCRIÇÃO DA CATEGORIA PARA CLASSFICAÇÃO DOS PRODUTOS
 		@NotNull(message="Campo Obrigatório")
 		@Size(min=5, max=1000, message="Esse campo deve conter 5 caracteres e no máximo 1000")
-		private String descricao_categoria;
+		private String descricao;
 		
 		//PALAVRAS CHAVES PARA FERRAMENTA DE BUSCA
 		@NotNull(message="Campo Obrigatório")
@@ -56,12 +56,12 @@
 			this.tipo = tipo;
 		}
 
-		public String getDescricao_categoria() {
-			return descricao_categoria;
+		public String getDescricao() {
+			return descricao;
 		}
 
-		public void setDescricao_categoria(String descricao_categoria) {
-			this.descricao_categoria = descricao_categoria;
+		public void setDescricao(String descricao) {
+			this.descricao = descricao;
 		}
 
 		public String getPalavraChave() {
