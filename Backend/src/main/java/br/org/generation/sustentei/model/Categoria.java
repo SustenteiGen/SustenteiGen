@@ -1,15 +1,22 @@
-	package br.org.generation.sustentei.model;
+package br.org.generation.sustentei.model;
 
 
-	//import java.time.LocalDate;
+	import java.util.List;
+
+import javax.persistence.CascadeType;
+
+//import java.time.LocalDate;
 
 	import javax.persistence.Entity;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
 	import javax.persistence.Id;
-	import javax.persistence.Table;
+    import javax.persistence.OneToMany;
+    import javax.persistence.Table;
 	import javax.validation.constraints.NotNull;
 	import javax.validation.constraints.Size;
+
+    import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 	@Entity
 	@Table(name="tb_categoria")
@@ -39,7 +46,21 @@
 		// private LocalDate data;
 		// data.setDate(data.getDate( + a));
 		
-	//METODOS GETTERS AND SETTERS
+		//CHAVE ESTRANGEIRA DE CATEGORIA PARA O PRODUTO
+		@OneToMany (mappedBy = "categoria", cascade = CascadeType.ALL)
+		@JsonIgnoreProperties ({"categoria","produto"})
+		private List <Produto> produto;
+		
+		
+	public List<Produto> getProduto() {
+			return produto;
+		}
+
+		public void setProduto(List<Produto> produto) {
+			this.produto = produto;
+		}
+
+		//METODOS GETTERS AND SETTERS
 		public long getId() {
 			return id;
 		}
