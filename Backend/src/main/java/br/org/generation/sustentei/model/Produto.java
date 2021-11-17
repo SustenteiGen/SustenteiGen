@@ -2,8 +2,6 @@ package br.org.generation.sustentei.model;
 
 import java.math.BigDecimal;
 
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,45 +16,44 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table (name = "tb_produto")
+@Table(name = "tb_produto")
 public class Produto {
-
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-    //CADASTRAR O NOME
-	@NotNull (message = "Este campo é obrigatório")
-    private String nome;
-    //CADASTRAR A DESCRIÇÃO
-	@NotNull (message = "Este campo é obrigatório")
-    private String descricao;
-    // CADASTRO DO TAMANHO
-	@NotNull (message = "Este campo é obrigatório")
-    private String tamanho;
-	//CADASTRO DA PALAVRA CHAVE
-	@NotNull (message = "Este campo é obrigatório")
-    private String palavraChave;
-    
-	//CHAVE ESTRANGEIRA
+	// CADASTRAR O NOME
+	@NotNull(message = "Este campo é obrigatório")
+	private String nome;
+	// CADASTRAR A DESCRIÇÃO
+	@NotNull(message = "Este campo é obrigatório")
+	private String descricao;
+	// CADASTRO DO TAMANHO
+	@NotNull(message = "Este campo é obrigatório")
+	private String tamanho;
+	// CADASTRO DA PALAVRA CHAVE
+	@NotNull(message = "Este campo é obrigatório")
+	private String palavraChave;
+
+	// CHAVE ESTRANGEIRA
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
-	@NotNull(message="Preço é obrigatório!")
+	@NotNull(message = "Preço é obrigatório!")
 	@Positive(message = "Digite um valor maior do que zero")
-    private BigDecimal preco;
-    
+	private BigDecimal preco;
+
 	@NotNull
-    private String imagem;
-    
-	//CHAVE ESTRANGEIRA
-	@ManyToOne 
-	@JsonIgnoreProperties ("produto")
+	private String imagem;
+
+	// CHAVE ESTRANGEIRA
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
 	private Usuario usuario;
-	
-	//CHAVE ESTRANGEIRA
-	@ManyToOne 
-	@JsonIgnoreProperties ("produto")
+
+	// CHAVE ESTRANGEIRA
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
-	
+
 	public Categoria getCategoria() {
 		return categoria;
 	}
@@ -128,6 +125,5 @@ public class Produto {
 	public void setPalavraChave(String palavraChave) {
 		this.palavraChave = palavraChave;
 	}
-	
-	
+
 }
