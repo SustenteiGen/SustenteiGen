@@ -1,11 +1,11 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box, Grid } from '@material-ui/core';
 import "./Navbar.css";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 function Navbar() {
     return (
-        <>
+        <body>
             <AppBar position="static" className="cor-navbar">
                 <Toolbar variant="dense">
                     <Box mx={1} marginTop className="pointer"  >
@@ -13,7 +13,7 @@ function Navbar() {
                             <img src="https://i.imgur.com/AgkYNLG.png" alt="logo" height="50px" width="50px"  />
                         </Typography>
                     </Box>
-
+                    
                     <Box display="flex" justifyContent="start">
                         <Box mx={10} className="pointer">
                             <Typography variant="h6" color="inherit">
@@ -51,8 +51,8 @@ function Navbar() {
                     </Box>
                 </Toolbar>
             </AppBar>
-        </>
-    )
+            </body>
+        )
 }
 
 export default Navbar;

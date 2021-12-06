@@ -7,6 +7,7 @@ import Home from './paginas/home/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Sobre from './paginas/sobre/Sobre';
 import CadastroUsuario from './paginas/cadastro/CadastroUsuario';
+import Login from './paginas/login/Login';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
             <Route path='/sobre'>
               <Sobre />
+            </Route>
+
+            <Route path='/login'>
+              <Login />
             </Route>
 
             <Route path='/cadastro'>
