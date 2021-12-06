@@ -13,3 +13,20 @@
     color: white;
     margin-top: 10;
 }
+
+.text-decorator{
+    text-decoration: none;
+    color: white;
+    font: 30px;
+}
+
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+    }
+}

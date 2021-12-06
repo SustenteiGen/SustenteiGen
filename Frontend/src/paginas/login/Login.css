@@ -3,7 +3,6 @@
     background-repeat: no-repeat; 
     width: 100vh;
     min-height: 100vh;
-
     background-position: center;
 }
 
@@ -16,12 +15,7 @@
     color: rgb(158, 4, 4);
 }
 
-.text-decorator-none{
-    text-decoration: none;
-    color: rgb(158, 4, 4)!important;
-}
-
-.text{
+.text-login{
     text-decoration: none;
     color:white;
 }

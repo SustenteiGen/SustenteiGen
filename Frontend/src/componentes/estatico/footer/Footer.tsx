@@ -13,7 +13,7 @@ function Footer() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box className='box1'>
+                    <Box style={{backgroundColor:'#067302', height:'30px'}}>
 
                         <Box display="flex" alignItems="center" justifyContent="center">
                             <a href="https://web.telegram.org/k/" target="_blank">

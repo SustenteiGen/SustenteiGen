@@ -10,7 +10,7 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" >
                 <Grid xs={12} className="caixa2" direction="row" justifyContent="center" alignItems="center" >
                     <Box display="flex" justifyContent="center">
-                        <Typography variant="h5" gutterBottom color="textPrimary" align="center" className='titulo'>PRODUTOS EM DESTAQUE</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" align="center" className='titulo'>PRODUTOS EM DESTAQUE</Typography>
                     </Box>
                     </Grid>
             </Grid>
@@ -22,15 +22,15 @@ function Home() {
                         <CardActionArea>
                             <CardMedia component="img"
                                 alt="Copo retrátil de silicone"
-                                height="495"
-                                image="https://i.imgur.com/ITjLPV8.png"
+                                height="450"
+                                image="https://i.imgur.com/Luo9kI7.png"
                                 title="Copo retrátil de silicone" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
                                 Copo retrátil de silicone
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                Copo retrátil com tampa feito de polipropileno, ideal para café.
+                                Copo retrátil com tampa feito de polipropileno. Abrace a idéia e evite o descarte de plástico nos oceanos e diminua os gases de efeito estufa.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -48,7 +48,7 @@ function Home() {
                             <CardMedia component="img"
                                 alt="Canudo de Inox"
                                 height="450"
-                                image="https://i.imgur.com/nVYTsnu.jpg"
+                                image="https://i.imgur.com/eQdhpH1.png"
                                 title="Canudo de Inox" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
@@ -73,7 +73,7 @@ function Home() {
                             <CardMedia className="card-img" component="img"
                                 alt="Absorvente Reutilizável"
                                 height="450"
-                                image="https://i.imgur.com/TRBaca9.jpg"
+                                image="https://i.imgur.com/hnnl7e9.png"
                                 title="Absorvente Reutilizável" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">

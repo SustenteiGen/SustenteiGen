@@ -15,7 +15,7 @@ function Sobre() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-hand-drawn-cartoon-meeting-room-meeting-office-staff-white-collar-elite-png-image_636347.jpg" alt="imagem Sobre Nós" width="800px" height="500px" />
+                    <img src="https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-hand-drawn-cartoon-meeting-room-meeting-office-staff-white-collar-elite-png-image_636347.jpg" alt="imagem Sobre Nós" width="600px" height="500px" />
                 </Grid>
                 <Grid item xs={6} >
                 <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "black", fontWeight: "bold" }}>Equipe de Desenvolvimento(a)!</Typography>

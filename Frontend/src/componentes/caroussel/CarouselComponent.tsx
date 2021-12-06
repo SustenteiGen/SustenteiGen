@@ -10,7 +10,7 @@ function CarouselComponent() {
     {id: 4, title: 'item #4', img:"https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1635984430088-home-sliderdesktopcupom.jpg"}
     ])
     return (
-<Carousel isRTL={false} enableAutoPlay autoPlaySpeed={1500}>
+<Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000}>
 {items.map(item => <div key={item.id}>
 <img src={item.img} alt="" width="auto" height="auto"/>
 
