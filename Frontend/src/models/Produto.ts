@@ -9,7 +9,7 @@ interface Produto{
     palavraChave: string;
     preco: string;
     tamanho: string;
-    Categoria?: Categoria | null;
+    categoria?: Categoria | null;
     User?: User | null;
 }
 
