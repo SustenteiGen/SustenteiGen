@@ -1,0 +1,32 @@
+.cor-navbar{
+    background-color: #D9C2AD !important;
+}
+.cor-navbar2{
+    background-color: #067302 !important;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.carrinho{
+    font: 30px;
+    color: white;
+    margin-top: 10;
+}
+
+.text-decorator{
+    text-decoration: none;
+    color: white;
+    font: 30px;
+}
+
+@media (max-width: 999px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-list{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+    }
+}

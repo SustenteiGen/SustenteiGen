@@ -1,0 +1,41 @@
+.caixa{
+    background-color: #E4D1BF;
+}
+
+.caixa2{
+    background-color: #FFB545;
+}
+
+.titulo{
+    color: #90671D ; 
+}
+
+.texto{
+    color: white;
+}
+
+.botao{
+    border-color: white ;
+    background-color: #3F51B5;
+    color: white ;
+}
+
+.postagens{
+    background-color: white;
+}
+.card-img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.margem-card{
+    margin-top: 100px;
+    margin: 40px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    
+
+}
