@@ -6,8 +6,23 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
 import MenuComponent from '../../menuComponent/MenuComponent';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function Navbar() {
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    var navBarTema;
+
+    if (token!= "") {
+        navBarTema =    <MenuComponent />
+    }
+
+    
+
+
     return (
         <body>
             <AppBar position="static" className="cor-navbar">
@@ -27,6 +42,8 @@ function Navbar() {
                             </Box>
                         </Link>
 
+                 
+                    {navBarTema}
 
                     </Box>
 

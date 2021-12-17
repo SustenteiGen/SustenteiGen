@@ -8,6 +8,8 @@ import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { busca } from '../../services/Service';
 import Categoria from '../../models/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 export default function MenuComponent() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -20,13 +22,15 @@ export default function MenuComponent() {
     };
 
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     let history = useHistory();
 
     async function getCategoria() {
         await busca("/categorias", setCategorias, {
             headers: {
-                'Authorization': token
+                'Authorization':token
             }
         })
     }
@@ -64,8 +68,8 @@ export default function MenuComponent() {
                 }}
             >
                 {categorias.map(categoria => (
-                    <Link to={`/categorias/${categoria.id}`} className="text-decorator-none">
-                        <MenuItem onClick={handleClose}>{categoria.tipo}</MenuItem>
+                    <Link to={`/produtoPorCategoria/${categoria.id}`} className="text-decorator-none">
+                        <MenuItem onClick={handleClose}>{categoria.descricao}</MenuItem>
                     </Link>
                 ))
                 }
