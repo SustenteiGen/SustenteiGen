@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600&display=swap%27');
+
 .caixa{
     background-color: #E4D1BF;
 }
 
-.caixa2{
-    background-color: #FFB545;
+.destaque{
+    background-color: #9CDF3A;
+    
 }
 
 .titulo{
-    color: #90671D ; 
+    color: #FFFFFF !important ;
+    font-family: 'Readex Pro', sans-serif !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+    margin-top: 8px !important;
 }
 
 .texto{
@@ -15,7 +22,7 @@
 }
 
 .botao{
-    border-color: white ;
+    border-color: rgb(17, 11, 11) ;
     background-color: #3F51B5;
     color: white ;
 }
@@ -36,6 +43,4 @@
 .flex-container {
     display: flex;
     justify-content: center;
-    
-
 }

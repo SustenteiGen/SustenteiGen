@@ -1,33 +1,26 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
-import { useHistory, useParams } from 'react-router-dom';
+import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Box } from "@material-ui/core"
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 import { toast } from 'react-toastify';
 import './CadastroProd.css';
 import Categoria from '../../../models/Categoria';
 import Produto from "../../../models/Produto";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
 
 function CadastroProd() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
-            toast.error('Você precisa estar logado', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
-            history.push("/login")
-
+            alert('Você precisa estar logado');
         }
     }, [token])
 
@@ -37,6 +30,7 @@ function CadastroProd() {
             descricao: '',
             tipo: '',
             palavraChave: '',
+            produto: [],
         })
     const [produto, setProduto] = useState<Produto>({
         id: 0,
@@ -100,32 +94,14 @@ function CadastroProd() {
                     'Authorization': token
                 }
             })
-            toast.success('Produto atualizado com sucesso', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
+            alert('Produto atualizado com sucesso');
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            toast.success('Produto cadastrado com sucesso', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-            });
+            alert('Produto cadastrado com sucesso');
         }
         back()
 
@@ -158,14 +134,22 @@ function CadastroProd() {
                         })}>
                         {
                             categorias.map(categoria => (
-                                <MenuItem value={categoria.id}>{categoria.descricao}</MenuItem>
+                                <MenuItem value={categoria.id}>{categoria.tipo}</MenuItem>
                             ))
                         }
                     </Select>
                     <FormHelperText>Escolha uma categoria para o produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Box className='p'>
+                    <Button type="submit" variant="contained" className='cor-boton4 'color="primary">
                         Finalizar
                     </Button>
+                    <Link to={`/prod/`}  className='text-decorator-none bt'>
+                    <Button type="submit" variant="contained" className='cor-boton5 'color="primary">
+                        Cancelar
+                    </Button>
+                    </Link>
+                    </Box>
+                    
                 </FormControl>
             </form>
         </Container>

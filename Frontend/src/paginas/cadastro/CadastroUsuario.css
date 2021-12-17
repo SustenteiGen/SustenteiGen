@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600&display=swap%27');
 .imagem2{
     background-image: url(https://i.imgur.com/mfC8I8I.pngtps://discordapp.com/chahttps://images-ext-2.discordapp.net/external/f9pqwhuLWwpVnf0r3T57gU7vbf6mhT46GT1F1lywWFc/https/i.imgur.com/mfC8I8I.pngnnels/889470122106945567/900887039921254471/916042266106269716);
     background-repeat: no-repeat; 
@@ -11,9 +12,9 @@
     font-weight: bold !important;
 }
 
-.btnCancelar{
+.btnCancelarcad{
     margin-right: 20px !important;
-    color: rgb(158, 4, 4);
+    background-color: rgb(158, 4, 4) !important;
 }
 
 .text-decorator-none{
@@ -24,4 +25,10 @@
 .text{
     text-decoration: none;
     color:white;
+}
+
+.textocad{
+    font-family: 'Readex Pro', sans-serif !important;
+    font-size: 30px !important;
+    color:#006400 !important;
 }

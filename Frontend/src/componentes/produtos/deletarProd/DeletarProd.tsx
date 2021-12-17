@@ -5,16 +5,21 @@ import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarProd() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [post, setPosts] = useState<Produto>();
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado!")
+            alert("Você precisa estar logado")
             history.push("/login")
 
         }
@@ -35,13 +40,13 @@ function DeletarProd() {
     }
 
     function sim() {
-        history.push('/produtos')
+        history.push('/prod')
         deleteId(`/produtos/${id}`, {
             headers: {
                 'Authorization': token
             }
         });
-        alert('Produto deletado com sucesso.');
+        alert('Produto deletado com sucesso');
     }
 
     function nao() {
@@ -49,7 +54,7 @@ function DeletarProd() {
     }
     return (
         <>
-            <Box m={2}>
+            <Box m={2}  >
                 <Card variant="outlined" >
                     <CardContent>
                         <Box justifyContent="center">
@@ -65,12 +70,12 @@ function DeletarProd() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                                <Button onClick={sim} variant="contained" className="marginLeft cor-boton4" size='large' color="primary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} className='cor-boton5'variant="contained" size='large' color="secondary">
                                     Não
                                 </Button>
                             </Box>

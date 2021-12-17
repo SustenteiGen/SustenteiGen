@@ -1,0 +1,38 @@
+.cor-boton3{
+    font-weight: bold !important;
+    margin-top: 15px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#067302	 !important;
+}
+.cor-boton3:hover{
+    font-weight: bold !important;
+    margin-top: 15px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#067302!important;
+}
+
+.cor-boton4{
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#9CDF3A	 !important;
+}
+.cor-boton4:hover{
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#9CDF3A!important;
+}
+
+.cor-boton5{
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#8B0000	 !important;
+}
+.cor-boton5:hover{
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#8B0000!important;
+}

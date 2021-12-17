@@ -1,60 +1,60 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { flexbox } from '@material-ui/system';
 import "./Navbar.css";
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
+import MenuComponent from '../../menuComponent/MenuComponent';
 
 function Navbar() {
     return (
         <body>
             <AppBar position="static" className="cor-navbar">
                 <Toolbar variant="dense">
-                    <Box mx={1} marginTop className="pointer"  >
-                        <Typography variant="h5" color="inherit">
-                            <img src="https://i.imgur.com/AgkYNLG.png" alt="logo" height="50px" width="50px"  />
-                        </Typography>
-                    </Box>
-                    
-                    <Box display="flex" justifyContent="start">
-                    <Link to="/home" className="text-decorator">
-                        <Box mx={10} className="pointer">
-                            <Typography variant="h6" color="inherit">
-                                Home
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/sobre" className="text-decorator">
-                        <Box mx={10} className="pointer">
-                            <Typography variant="h6" color="inherit">
-                                Sobre Nós
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/catalogo" className="text-decorator">
-                        <Box mx={10} className="pointer">
-                            <Typography variant="h6" color="inherit">
-                                Catalogo
-                            </Typography>
-                        </Box>
-                    </Link>
-                    <Link to="/login" className="text-decorator">
-                        <Box mx={10} className="pointer">
-                            <Typography variant="h6" color="inherit">
-                                Login
-                            </Typography>
-                        </Box>
-                    </Link>
-                        <Box mx={10} className="pointer">
-                            <Typography variant="h6" color="inherit">
-                                Venda
-                            </Typography>
-                        </Box>
+
+                    <Box display="flex">
+
+                        <Link to="/sobre" className="text-decorator">
+                            <Box mx={11} className="pointer">
+                                <Typography variant="h6" gutterBottom color="textPrimary" align="center" className="cor-ic">SOBRE NÓS</Typography>
+                            </Box>
+                        </Link>
+
+                        <Link to="/catalogo" className="text-decorator">
+                            <Box mx={8} className="pointer">
+                                <Typography variant="h6" gutterBottom color="textPrimary" align="center" className="cor-ic">CATÁLOGO</Typography>
+                            </Box>
+                        </Link>
+
+
                     </Box>
 
-                    <Box display="flex" justifyContent="flex-end">
-                    <Box mx={10} className="pointer">
+
+                    <Box mx={18} className="pointer" paddingLeft={5}>
+                        <Link to="/home" className="text-decorator">
+                            <Box mx={1} marginY={1} >
+                                <Typography variant="h5" color="inherit" className="margin-right">
+                                    <img src="https://i.imgur.com/DwzvACG.png" alt="logo" height="60px" width="70px" />
+                                </Typography>
+                            </Box>
+                        </Link>
+                    </Box>
+
+
+
+                    <Box mx={5} display="flex" justifyContent="flex-end">
+
+                        <Link to="/login" className="text-decorator" >
+                            <Box mx={14} className="pointer">
+                                <Typography variant="h6" color="inherit">
+                                    <PermIdentityIcon className="cor-log" />
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Box mx={10} className="pointer">
                             <Typography variant="h6" color="inherit">
-                                <ShoppingCartIcon style={{ fontSize: 30, color: "white", marginTop:10 }} />
+                                <ShoppingCartOutlinedIcon className="cor-log2" />
                             </Typography>
                         </Box>
                     </Box>

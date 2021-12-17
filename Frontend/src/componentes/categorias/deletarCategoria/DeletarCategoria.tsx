@@ -5,12 +5,17 @@ import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function DeletarCategoria() {
     let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     const [categoria, setCategoria] = useState<Categoria>()
 
     useEffect(() => {
@@ -42,7 +47,7 @@ function DeletarCategoria() {
                 'Authorization': token
             }
         });
-        alert('Categoria deletada com sucesso');
+        alert("Categoria deletada com sucesso")
     }
 
     function nao() {
@@ -66,12 +71,12 @@ function DeletarCategoria() {
                     <CardActions>
                         <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
                             <Box mx={2}>
-                                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                                <Button onClick={sim} variant="contained" className="marginLeft cor-boton4" size='large' color="primary">
                                     Sim
                                 </Button>
                             </Box>
                             <Box mx={2}>
-                                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                                <Button onClick={nao} variant="contained" className='cor-boton5' size='large' color="secondary">
                                     Não
                                 </Button>
                             </Box>

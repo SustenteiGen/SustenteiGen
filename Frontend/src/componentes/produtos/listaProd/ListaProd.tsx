@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import useLocalStorage from 'react-use-localstorage';
 import './ListaProd.css';
 import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast as alerta } from 'react-toastify';
 
-function ListaProd() {
+function ListaProd(){
     const [produto, setProduto] = useState<Produto[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     let history = useHistory();
 
     useEffect(() => {
@@ -35,6 +39,13 @@ function ListaProd() {
 
     return (
         <>
+        <Link to={`/formularioprod/`} className="text-decorator-none">
+                    <Box mx={1} display="flex" justifyContent="center" mb={1.5} className='p'>
+                        <Button variant="contained" className="marginLeft cor-boton3" size='small' color="primary" >
+                            Deseja cadastrar uma novo produto?
+                        </Button>
+                    </Box>
+                </Link>
             {
                 produto.map(produto => (
                     <Box m={2} >
@@ -53,16 +64,16 @@ function ListaProd() {
                                 <img src={produto.imagem} width={300} alt=""></img>    
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produto.preco}
+                                    R$ {produto.preco}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produto.tamanho}
+                                    Tamanho: {produto.tamanho}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produto.palavraChave}
+                                    Palavras Chaves: {produto.palavraChave}
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {produto.categoria?.descricao}
+                                    Categoria: {produto.categoria?.tipo}
                                 </Typography>
                             </CardContent>
                             <CardActions>
@@ -70,14 +81,14 @@ function ListaProd() {
 
                                     <Link to={`/formularioprod/${produto.id}`} className="text-decorator-none" >
                                         <Box mx={1}>
-                                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                                            <Button variant="contained" className="marginLeft cor-boton4" size='small' color="primary" >
                                                 atualizar
                                             </Button>
                                         </Box>
                                     </Link>
                                     <Link to={`/deletarprod/${produto.id}`} className="text-decorator-none">
                                         <Box mx={1}>
-                                            <Button variant="contained" size='small' color="secondary">
+                                            <Button variant="contained" className='cor-boton5' size='small' color="secondary">
                                                 deletar
                                             </Button>
                                         </Box>

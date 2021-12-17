@@ -1,21 +1,34 @@
-.imagem2{
-    background-image: url(https://i.imgur.com/mfC8I8I.pngtps://discordapp.com/chahttps://images-ext-2.discordapp.net/external/f9pqwhuLWwpVnf0r3T57gU7vbf6mhT46GT1F1lywWFc/https/i.imgur.com/mfC8I8I.pngnnels/889470122106945567/900887039921254471/916042266106269716);
-    background-repeat: no-repeat; 
-    width: 100vh;
-    min-height: 100vh;
-    background-position: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600&display=swap%27');
 
-.textos2{
+.textologin{
+    font-family: 'Readex Pro', sans-serif !important;
+    font-size: 30px !important;
+    color:#006400 !important;
+}
+.cor-boton6{
     font-weight: bold !important;
+    margin-left: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#067302 !important;
+}
+.cor-boton6:hover{
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#067302!important;
 }
 
-.btnCancelar{
+.cor-boton7{
     margin-right: 20px !important;
-    color: rgb(158, 4, 4);
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#BFA68F !important;
+}
+.cor-boton7:hover{
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#BFA68F !important;
 }
 
-.text-login{
-    text-decoration: none;
-    color:white;
-}

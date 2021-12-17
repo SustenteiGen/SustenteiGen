@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect, ChangeEvent } from "react";
 import { Typography, Box, Grid, Button, Card, CardMedia, CardActionArea, CardContent, CardActions } from '@material-ui/core';
 import './Home.css'
 import CarouselComponent from '../../componentes/caroussel/CarouselComponent';
+import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 function Home() {
+    let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
     return (
         <>
-        <CarouselComponent></CarouselComponent>
-        
+            <CarouselComponent></CarouselComponent>
+
             <Grid container direction="row" justifyContent="center" alignItems="center" >
-                <Grid xs={12} className="caixa2" direction="row" justifyContent="center" alignItems="center" >
+                <Grid xs={12} className="destaque" direction="row" justifyContent="center" alignItems="center" >
                     <Box display="flex" justifyContent="center">
-                        <Typography variant="h4" gutterBottom color="textPrimary" align="center" className='titulo'>PRODUTOS EM DESTAQUE</Typography>
+                        <Typography variant="h6" gutterBottom color="textPrimary" align="center" className='titulo' >PRODUTOS EM DESTAQUE</Typography>
                     </Box>
                     </Grid>
             </Grid>
 
             <Grid container direction="row" justifyContent="center" alignItems="center" className="flex-container" >
 
-            <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
+                <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
                     <Card className="margem-card">
                         <CardActionArea>
                             <CardMedia component="img"
@@ -27,10 +34,10 @@ function Home() {
                                 title="Copo retrátil de silicone" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                Copo retrátil de silicone
+                                    Copo retrátil de silicone
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                Copo retrátil com tampa feito de polipropileno. Abrace a idéia e evite o descarte de plástico nos oceanos e diminua os gases de efeito estufa.
+                                    Copo retrátil com tampa feito de polipropileno. Abrace a idéia e evite o descarte de plástico nos oceanos e diminua os gases de efeito estufa.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -40,9 +47,9 @@ function Home() {
                             </Button>
                         </CardActions>
                     </Card>
-                    </Grid>
+                </Grid>
 
-                    <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
+                <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
                     <Card className="margem-card" >
                         <CardActionArea>
                             <CardMedia component="img"
@@ -52,10 +59,10 @@ function Home() {
                                 title="Canudo de Inox" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                Canudo de Inox
+                                    Canudo de Inox
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                Canudo feito em aço inox, ideal para substituir o canudo plástico. Resistente, durável e reutilizável. Acompanha escova que facilita a limpeza e confere longa vida útil ao produto.
+                                    Canudo feito em aço inox, ideal para substituir o canudo plástico. Resistente, durável e reutilizável. Acompanha escova que facilita a limpeza e confere longa vida útil ao produto.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -65,9 +72,9 @@ function Home() {
                             </Button>
                         </CardActions>
                     </Card>
-                    </Grid>
-                    
-                    <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
+                </Grid>
+
+                <Grid xs={4} direction="row" justifyContent="center" alignItems="center" >
                     <Card className="margem-card" >
                         <CardActionArea>
                             <CardMedia className="card-img" component="img"
@@ -77,10 +84,10 @@ function Home() {
                                 title="Absorvente Reutilizável" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                Absorvente Reutilizável
+                                    Absorvente Reutilizável
                                 </Typography>
-                                <Typography  variant="body2" color="textSecondary" component="p">
-                                Absorvente com tecidos especiais que garantem a absorção, segurança e respirabilidade. Com formato anatômico e ajuste por botões.
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    Absorvente com tecidos especiais que garantem a absorção, segurança e respirabilidade. Com formato anatômico e ajuste por botões.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -90,7 +97,7 @@ function Home() {
                             </Button>
                         </CardActions>
                     </Card>
-                    </Grid>
+                </Grid>
             </Grid>
         </>
     )

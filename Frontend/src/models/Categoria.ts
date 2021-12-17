@@ -4,8 +4,8 @@ interface Categoria{
     id: number;
     descricao: string;
     tipo: string;
-    palavraChave: string
-    produto?: Produto | null;
+    palavraChave: string;
+    produto: Produto[],
 }
 
 export default Categoria;

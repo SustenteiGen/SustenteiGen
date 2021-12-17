@@ -1,22 +1,50 @@
-import React from 'react'
-import Carousel from 'react-elastic-carousel'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button';
+import Carousel from 'react-bootstrap/Carousel'
 
 function CarouselComponent() {
-    const [items, setstate] = useState([
-    {id: 1, title: 'item #1', img:"https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1635984273547-home-sliderdesktop1.jpg"},
-    {id: 2, title: 'item #2', img:"https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1635984306064-home-sliderdesktop.jpg"},
-    {id: 3, title: 'item #3', img:"https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1635984391643-home-sliderdesktop1.jpg"},
-    {id: 4, title: 'item #4', img:"https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1635984430088-home-sliderdesktopcupom.jpg"}
+    const [itens, setItens] = useState([
+        {
+            img: "https://i.imgur.com/lPEtJIq.png",
+            titulo: "Titulo 1",
+        },
+        {
+            img: "https://i.imgur.com/MyiXz3a.png",
+            titulo: "Titulo 1",
+
+        },
+        {
+            img: "https://i.imgur.com/bm4V1TF.png",
+            titulo: "Titulo 1",
+        },
+        {
+            img: "https://i.imgur.com/dQuVTd1.png",
+            titulo: "Titulo 1",
+        },
     ])
     return (
-<Carousel isRTL={false} enableAutoPlay autoPlaySpeed={15000}>
-{items.map(item => <div key={item.id}>
-<img src={item.img} alt="" width="auto" height="auto"/>
+        <div>
+            <Carousel>
+                {
+                    itens.map(item => (
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src={item.img}
+                                alt="First slide"
+                            />
+                            <Carousel.Caption>
+                                
+                            </Carousel.Caption>
 
-</div>)}
-</Carousel>
-)
+                        </Carousel.Item>
+                    ))
+                }
+
+
+            </Carousel>
+        </div>
+    )
 }
 
 export default CarouselComponent
