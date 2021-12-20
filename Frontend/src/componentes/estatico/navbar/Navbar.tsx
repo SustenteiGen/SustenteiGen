@@ -37,13 +37,10 @@ function Navbar() {
                         </Link>
 
                         <Link to="/catalogo" className="text-decorator">
-                            <Box mx={8} className="pointer">
-                                <Typography variant="h6" gutterBottom color="textPrimary" align="center" className="cor-ic">CATÁLOGO</Typography>
+                            <Box mx={8} >
+                            {navBarTema}
                             </Box>
                         </Link>
-
-                 
-                    {navBarTema}
 
                     </Box>
 

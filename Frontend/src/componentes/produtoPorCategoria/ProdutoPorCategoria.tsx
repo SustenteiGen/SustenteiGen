@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Container, Grid } from '@material-ui/core';
 import { useHistory, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../services/Service';
@@ -7,7 +7,7 @@ import Categoria from '../../models/Categoria';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
-
+import './ProdutoPorCategoria.css';
 
 function ProdutoPorCategoria() {
 
@@ -42,30 +42,48 @@ function ProdutoPorCategoria() {
 
     return (
         <>
+        <Grid xs={12} container
+                        direction="row"
+                        justifyContent="space-evenly"
+                        alignItems="baseline">
             {
                 categoria.produto.map(prod => (
-                    <Box m={2} >
-                        <Card variant="outlined">
-                            <CardContent>
-                                <Typography variant="h5" component="h2">
-                                    {prod.nome}
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    {prod.preco}
-                                </Typography>
-                                <Typography variant="body2" component="p">
-                                    {prod.categoria?.descricao}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Box display="flex" justifyContent="center" mb={1.5}>
-                                </Box>
-                            </CardActions>
-                        </Card>
-                    </Box>
+                    
+                        
+                        <Box m={1}>
+                            <Card variant="outlined">
+                                <CardContent className='estilo-card'>
+                                    <Typography variant="body2" component="p">
+                                        <img src={prod.imagem} width={400} className='catalogo-img'  alt=""></img>
+                                    </Typography>
+
+                                    <Typography variant="h5" component="h2" className='estilo-card'>
+                                        {prod.nome}
+                                    </Typography>
+                                    <Typography variant="h5" component="h2" className='estilo-card'>
+                                        R$: {prod.preco}
+                                    </Typography>
+                                    <Typography variant="body2" component="p" className='estilo-card'>
+                                        {prod.categoria?.descricao}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Box display="flex" justifyContent="center" mb={1.5}>
+                                        <Button variant="contained" color="primary" className='cor-bot-card'>Compre já</Button>
+                                    </Box>
+                                </CardActions>
+                            </Card>
+                        </Box>
+
+                        
+                        
+
                 ))
             }
-        </>)
+            </Grid>
+        </>
+        
+        )
 }
 
 export default ProdutoPorCategoria;

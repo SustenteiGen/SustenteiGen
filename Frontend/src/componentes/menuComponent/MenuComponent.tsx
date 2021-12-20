@@ -10,6 +10,7 @@ import { busca } from '../../services/Service';
 import Categoria from '../../models/Categoria';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
+import "./MenuComponent.css";
 
 export default function MenuComponent() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -49,8 +50,9 @@ export default function MenuComponent() {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
+                variant="text" className="marginLeft cor-catalogo" size='small' color="primary"
             >
-                CATALOGO
+                CATÁLOGO
             </Button>
             <Menu
                 id="demo-positioned-menu"
@@ -59,17 +61,17 @@ export default function MenuComponent() {
                 open={open}
                 onClose={handleClose}
                 anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
+                    vertical: 'bottom',
+                    horizontal: 'center',
                 }}
                 transformOrigin={{
                     vertical: 'top',
-                    horizontal: 'left',
+                    horizontal: 'center',
                 }}
             >
                 {categorias.map(categoria => (
                     <Link to={`/produtoPorCategoria/${categoria.id}`} className="text-decorator-none">
-                        <MenuItem onClick={handleClose}>{categoria.descricao}</MenuItem>
+                        <MenuItem onClick={handleClose} className='text-menu'>{categoria.tipo}</MenuItem>
                     </Link>
                 ))
                 }

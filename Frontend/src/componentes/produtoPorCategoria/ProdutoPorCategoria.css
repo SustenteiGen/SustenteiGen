@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600&display=swap%27');
+.estilo-card{
+    color: black !important; 
+    font-weight: bold !important;
+    font-family: 'Readex Pro', sans-serif !important;
+}
+
+.catalogo-img{
+    max-width: 400px;
+    
+    height: 400px;
+}
+.cor-bot-card{
+    font-weight: bold !important;
+    margin-left: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#9CDF3A	 !important;
+}
+.cor-bot-card:hover{
+    font-weight: bold !important;
+    margin-top: 0px !important;
+    color: rgb(247, 245, 245)!important;
+    background-color:#9CDF3A!important;
+}
