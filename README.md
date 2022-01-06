@@ -10,7 +10,7 @@ Bem Vindes ao GitHub do SUSTENTEI!🛒
   <hr>
   
   ### • **APRESENTAÇÃO**
-  A < /Sustentei > é um E-Commerce sustentável. Com o objetivo de  impactar o publico com a venda de produtos sustentáveis, ecológicos e biodegradáveis, além de notificar o usuário sobre a emissão de carbono referente ao frete do(s) produto(s).
+  A < /Sustentei > é um E-Commerce. Com o objetivo de  impactar o publico com a venda de produtos sustentáveis, ecológicos e biodegradáveis, além de notificar o usuário sobre a emissão de carbono referente ao frete do(s) produto(s).
   
 ## Tecnologias utilizadas:
 
